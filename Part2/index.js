@@ -1,16 +1,14 @@
-let idInput = document.getElementById('idInput');
-let colorInput = document.getElementById('colorInput');
+const idInput = document.getElementById('idInput');
+const colorInput = document.getElementById('colorInput');
 
 console.log(idInput);
 console.log(colorInput);
 
 
 function setCard() {
-    let card = document.getElementById(idInput.value);
+    const card = document.getElementById(idInput.value);
     card.style.color = colorInput.value;
-  
-    
-}
+  }
 
 function reset(){
     let diamonds = document.getElementById('diamonds');

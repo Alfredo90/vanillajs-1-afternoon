@@ -1,8 +1,8 @@
 const board = [];
 
 function play(clickedId) {
-  let playerSpan = document.getElementById('player');
-  let clickedElement = document.getElementById(clickedId);
+  const playerSpan = document.getElementById('player');
+  const clickedElement = document.getElementById(clickedId);
 
   if (playerSpan.innerText === 'X') {
     playerSpan.innerText = 'O';
@@ -15,18 +15,17 @@ function play(clickedId) {
   }
   console.log(board);
 
-function reset(){
-  let topLeft = board[0]
-  let topCenter = board[1];
-  let topRight = board[2];
-  let middleLeft = board[3];
-  let middleCenter = board[4];
-  let middleRight = board[5];
-  let bottomLeft = board[6];
-  let bottomCenter = board[7];
-  let bottomRight = board[8];
-}
-  
+  const topLeft = board[0];
+  const topCenter = board[1];
+  const topRight = board[2];
+  const middleLeft = board[3];
+  const middleCenter = board[4];
+  const middleRight = board[5];
+  const bottomLeft = board[6];
+  const bottomCenter = board[7];
+  const bottomRight = board[8];
+
+  // CHECKS ALL WINNING COMBINATIONS
   if (topLeft !== undefined && topLeft === topCenter && topLeft === topRight) {
     alert(`${topLeft} is the winner`);
     return;
@@ -60,7 +59,7 @@ function reset(){
     return;
   }
 
-  
+ 
   let boardFull = true;
   for (let i = 0; i <= 8; i++) {
     if (board[i] === undefined) {
@@ -71,7 +70,3 @@ function reset(){
     alert("Cat's game, there is no winner");
   }
 }
-
-
-
-
